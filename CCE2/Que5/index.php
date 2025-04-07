@@ -39,6 +39,7 @@ $high_salary_employees = $conn->query("SELECT * FROM employees WHERE salary > 35
 <html>
 <head>
     <title>Employee Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <h2>Add Employee</h2>
@@ -51,7 +52,7 @@ $high_salary_employees = $conn->query("SELECT * FROM employees WHERE salary > 35
     </form>
 
     <h2>All Employees</h2>
-    <table border="1">
+    <table class="table">
         <tr>
             <th>ID</th><th>Name</th><th>Designation</th><th>City</th><th>Salary</th><th>Actions</th>
         </tr>
@@ -82,7 +83,7 @@ $high_salary_employees = $conn->query("SELECT * FROM employees WHERE salary > 35
     </table>
 
     <h2>Employees in Pune</h2>
-    <table border="1">
+    <table class="table table-primary">
         <tr><th>ID</th><th>Name</th><th>Designation</th><th>City</th><th>Salary</th></tr>
         <?php while ($row = $pune_employees->fetch_assoc()) { ?>
             <tr>
