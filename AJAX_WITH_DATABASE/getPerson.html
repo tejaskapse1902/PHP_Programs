@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script>
+        function showPerson(str) {
+            if (str == "") {
+                document.getElementById("txtHint").innerHTML = "Please select Proper Name from list!!";
+                return;
+            }
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("GET", "getPerson.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        Select a Person:
+        <select name="persons" onchange="showPerson(this.value)">
+            <option value="">Select a Person:</option>
+            <option value="1">Tejas</option>
+            <option value="2">Rakshak</option>
+            <option value="3">Ajay</option>
+            <option value="4">Prajwal</option>
+            <option value="5">Nikhil</option>
+        </select>
+    </form>
+    <div id="txtHint"><b>Person info will be listed here...</b></div>
+
+</body>
+
+</html>

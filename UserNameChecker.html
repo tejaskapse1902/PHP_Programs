@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter Username:
+    <input type="text" onkeyup="checkUsername()" id="username">
+    <div id="msg"></div>
+    <script>
+        function checkUsername() {
+            var username = document.getElementById("username").value;
+            if (username === "") {
+                document.getElementById("msg").innerHTML = "Username should not be empty!!";
+                document.getElementById("msg").style.color = "red";
+            }
+            else if (username.length < 3) {
+                document.getElementById("msg").innerHTML = "Username is too short!!";
+                document.getElementById("msg").style.color = "red";
+            }
+            else {
+                document.getElementById("msg").innerHTML = "Username is valid!!";
+                document.getElementById("msg").style.color = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>

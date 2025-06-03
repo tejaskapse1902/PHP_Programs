@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>emplyee Search</title>
+    <script>
+        function search() {
+
+            s = document.getElementById('txt1').value;
+            ob = new XMLHttpRequest();
+
+            ob.onreadystatechange = function () {
+                if (ob.readyState == 4 && ob.status == 200) {
+                    document.getElementById('o').innerHTML = ob.responseText;
+                }
+            }
+            ob.open("GET", "check.php?srch=" + s);
+            ob.send();
+        }
+    </script>
+</head>
+
+<body>
+    <input type=text id=txt1 placeholder="Enter Employee  name" onkeyup="search()"></br>
+    <!-- <input type=button value="Search" onclick="search()"> -->
+    <h1 id="o">Output</h1>
+</body>
+
+</html>

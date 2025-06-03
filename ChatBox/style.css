@@ -1,0 +1,172 @@
+/* === Dark Mode Reset === */
+body {
+    background: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === Layout Container === */
+.chat-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+}
+
+/* === Chat Panels === */
+.chat-panel {
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #2c2c2c;
+}
+
+/* === Header (User Info) === */
+.header {
+    background: #2b2b2b;
+    /* border-bottom: 1px solid #3a3a3a; */
+    border-radius: 15px;
+    color: #fff;
+}
+
+/* === Avatar & Status === */
+.avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.status.online::before {
+    content: '● ';
+    color: #4caf50;
+    /* Green for online */
+}
+
+/* === Chat Box Area === */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 450px;
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* === Message Bubbles === */
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    clear: both;
+    word-break: break-word;
+}
+
+/* Sent by current user */
+.sent {
+    background: #2e7d32;
+    /* Dark green */
+    float: right;
+    text-align: right;
+    color: #fff;
+}
+
+/* Received from other user */
+.received {
+    background: #37474f;
+    /* Blue-grey */
+    float: left;
+    text-align: left;
+    color: #fff;
+}
+
+/* === Message Input Area === */
+.input-group {
+    /* border-top: 1px solid #333; */
+    border-radius: 15px;
+    background: #2c2c2c;
+}
+
+.input-group input.form-control {
+    background-color: #1f1f1f;
+    border: none;
+    color: #fff;
+}
+
+.input-group input.form-control:focus {
+    background-color: #262626;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+.input-group .btn-primary {
+    background-color: #4caf50;
+    border: none;
+    /* box-shadow: 0 0 10px #4caf50; */
+}
+
+.input-group .btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* === Scrollbar Styling for Dark Mode === */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox scrollbar support */
+.chat-box {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1a1a1a;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+    /* Soft grey for dark mode */
+    opacity: 1;
+    /* Ensure full visibility */
+}
+
+#message-user1::placeholder,
+#message-user2::placeholder {
+    color: #aaa;
+}
+
+.sent {
+    background: #2e7d32;
+    color: white;
+    text-align: right;
+    border-radius: 15px 15px 0 15px;
+    padding: 10px;
+}
+
+.received {
+    background: #37474f;
+    color: white;
+    text-align: left;
+    border-radius: 15px 15px 15px 0;
+    padding: 10px;
+}
