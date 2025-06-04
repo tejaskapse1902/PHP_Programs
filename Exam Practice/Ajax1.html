@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function val_user(str) {
+            var ob = false;
+            ob = new XMLHttpRequest();
+            if (str == "")
+                document.getElementById("a").innerHTML = "Username Should not be Empty";
+
+            else if (str.length <= 3)
+                document.getElementById('a').innerHTML = "lenght is too short";
+            else document.getElementById('a').innerHTML = "valid username";
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <table align="center">
+            <tr>
+                <td><b>Enter Username : </b></td>
+                <td><input type=text name=u_name id=u_name></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <font color="red" size=3><span id=a></span></font>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type=button value=submit onclick="val_user(form.u_name.value)"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

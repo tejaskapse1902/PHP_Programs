@@ -1,0 +1,13 @@
+Index of /programs/Exam Practice
+[ICO]	Name	Last modified	Size	Description
+[PARENTDIR]	Parent Directory	 	-	 
+[TXT]	Armstrong.php	2025-06-03 18:11	311	 
+[TXT]	CheckArrayIsEqual.php	2025-06-03 18:16	195	 
+[TXT]	CopyFileContent.php	2025-06-03 20:31	362	 
+[TXT]	ExceptionHandling.php	2025-06-03 18:25	317	 
+[TXT]	Factorial.php	2025-06-03 17:59	202	 
+[TXT]	FibbonacciSeries.php	2025-06-03 18:05	141	 
+[TXT]	Pattern1.php	2025-06-03 17:45	267	 
+[TXT]	PrimeNumber.php	2025-06-03 17:59	351	 
+[TXT]	VowelCount.php	2025-06-03 20:45	871	 
+Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.1.25 Server at localhost Port 8080
